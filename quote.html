@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request a Quote — West Wood Design</title>
+  <meta name="description" content="Start your custom furniture or millwork project. Request a free quote from West Wood Design in Port Angeles, WA." />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header scrolled" role="banner">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a class="nav-logo" href="index.html" aria-label="West Wood Design home">
+        <img src="images/logo.png" alt="West Wood Design logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="quote.html" class="btn btn-primary">Get a Quote</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <nav class="nav-mobile" aria-label="Mobile navigation">
+    <button class="nav-mobile-close" aria-label="Close menu">✕</button>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="index.html#services">Services</a>
+    <a href="about.html">About</a>
+    <a href="quote.html">Get a Quote</a>
+  </nav>
+
+  <main class="quote-page">
+
+    <div class="container">
+      <div class="quote-page-inner">
+
+        <aside class="quote-sidebar">
+          <p class="eyebrow">Start Your Project</p>
+          <h2>Request a Free Quote</h2>
+          <p>Tell us about your project and we'll follow up within one business day. No commitment required.</p>
+          <p>Whether you have a fully formed idea or just a rough sketch, we're here to help you figure it out.</p>
+          <ul>
+            <li>Free initial consultation</li>
+            <li>Detailed written quote</li>
+            <li>No surprise costs</li>
+            <li>Built in Port Angeles, WA</li>
+            <li>Ships or delivers throughout the Olympic Peninsula</li>
+          </ul>
+
+          <div style="margin-top: 3rem; padding: 2rem; background: var(--color-light); border-left: 3px solid var(--color-accent);">
+            <p class="eyebrow" style="margin-bottom: 0.5rem;">Questions?</p>
+            <p style="font-size: 0.9rem;">Email us at <a href="mailto:info@westwooddsgn.com" style="color: var(--color-accent); font-weight: 600;">info@westwooddsgn.com</a> or call <a href="tel:+19495294249" style="color: var(--color-accent); font-weight: 600;">(949) 529-4249</a>.</p>
+          </div>
+        </aside>
+
+        <div class="quote-form-wrap">
+          <!-- IMPORTANT: Replace YOUR_FORM_ID with your Formspree endpoint -->
+          <!-- Sign up free at formspree.io, create a form, and paste your endpoint here -->
+          <form id="quote-form" class="quote-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New Quote Request — West Wood Design" />
+            <input type="hidden" name="_next" value="https://westwooddsgn.com/thank-you.html" />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="first-name" name="first_name" required autocomplete="given-name" />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="last-name" name="last_name" required autocomplete="family-name" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="project-type">Project Type <span aria-hidden="true">*</span></label>
+              <select id="project-type" name="project_type" required>
+                <option value="" disabled selected>Select a category…</option>
+                <option value="custom-furniture">Custom Furniture (table, desk, bench, etc.)</option>
+                <option value="built-ins">Built-Ins (bookcase, entertainment center, etc.)</option>
+                <option value="millwork">Millwork (trim, cabinetry, wall panels)</option>
+                <option value="cnc">CNC / Laser Work</option>
+                <option value="commercial">Commercial / Retail</option>
+                <option value="other">Other / Not Sure</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="budget">Approximate Budget</label>
+                <select id="budget" name="budget">
+                  <option value="" disabled selected>Select a range…</option>
+                  <option value="under-1k">Under $1,000</option>
+                  <option value="1k-3k">$1,000 – $3,000</option>
+                  <option value="3k-7.5k">$3,000 – $7,500</option>
+                  <option value="7.5k-15k">$7,500 – $15,000</option>
+                  <option value="15k-plus">$15,000+</option>
+                  <option value="unsure">Not Sure</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="timeline">Ideal Timeline</label>
+                <select id="timeline" name="timeline">
+                  <option value="" disabled selected>When do you need it?</option>
+                  <option value="asap">As soon as possible</option>
+                  <option value="1-3mo">1–3 months</option>
+                  <option value="3-6mo">3–6 months</option>
+                  <option value="6mo-plus">6+ months / flexible</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="location">City / Area <span aria-hidden="true">*</span></label>
+              <input type="text" id="location" name="location" placeholder="e.g. Port Angeles, Sequim, Victoria…" required />
+            </div>
+
+            <div class="form-group">
+              <label for="description">Project Description <span aria-hidden="true">*</span></label>
+              <textarea id="description" name="description" required
+                placeholder="Tell us what you have in mind. Dimensions, materials, style references, special requirements — anything helps."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="how-heard">How did you hear about us?</label>
+              <select id="how-heard" name="how_heard">
+                <option value="" disabled selected>Select…</option>
+                <option value="referral">Word of mouth / referral</option>
+                <option value="google">Google search</option>
+                <option value="instagram">Instagram</option>
+                <option value="etsy">Etsy</option>
+                <option value="facebook">Facebook</option>
+                <option value="repeat">Returning customer</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">Send Quote Request</button>
+            <p class="form-note">We respond within 1 business day. Your information is never shared.</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <span>© 2025 West Wood Design LLC. All rights reserved.</span>
+        <span><a href="index.html">Back to Home</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

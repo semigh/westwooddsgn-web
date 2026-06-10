@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — West Wood Design</title>
+  <meta name="description" content="Browse custom furniture, built-ins, and commercial millwork projects by West Wood Design in Port Angeles, WA." />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header scrolled" role="banner">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a class="nav-logo" href="index.html" aria-label="West Wood Design home">
+        <img src="images/logo.png" alt="West Wood Design logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="quote.html" class="btn btn-primary">Get a Quote</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <nav class="nav-mobile" aria-label="Mobile navigation">
+    <button class="nav-mobile-close" aria-label="Close menu">✕</button>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="index.html#services">Services</a>
+    <a href="about.html">About</a>
+    <a href="quote.html">Get a Quote</a>
+  </nav>
+
+  <main class="portfolio-page">
+
+    <div class="portfolio-hero-strip">
+      <div class="container">
+        <p class="eyebrow">Our Work</p>
+        <h1>Portfolio</h1>
+        <p>A selection of residential and commercial projects from our Port Angeles shop.</p>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="portfolio-filter">
+        <button class="filter-btn active" data-filter="all">All Work</button>
+        <button class="filter-btn" data-filter="furniture">Furniture</button>
+        <button class="filter-btn" data-filter="builtins">Built-Ins</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+        <button class="filter-btn" data-filter="cnc">CNC / Laser</button>
+      </div>
+
+      <div class="portfolio-full-grid">
+
+        <div class="portfolio-item" data-category="builtins">
+          <img src="images/hero.jpg" alt="Custom slatted wood attic remodel with integrated LED lighting" loading="lazy" />
+          <div class="portfolio-overlay">
+            <span>Built-Ins / Residential</span>
+            <h3>Custom Attic Remodel</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="builtins">
+          <img src="images/portfolio-attic2.jpg" alt="Attic remodel slatted wall detail" loading="lazy" />
+          <div class="portfolio-overlay">
+            <span>Built-Ins / Residential</span>
+            <h3>Attic Remodel — Detail</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="builtins">
+          <img src="images/portfolio-builtins.jpg" alt="Floor-to-ceiling built-in shelving under staircase" loading="lazy" />
+          <div class="portfolio-overlay">
+            <span>Built-Ins</span>
+            <h3>Under-Stair Built-In</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="builtins">
+          <img src="images/portfolio-detail.jpg" alt="Custom floating shelf with LED strip lighting" loading="lazy" />
+          <div class="portfolio-overlay">
+            <span>Built-Ins / Detail</span>
+            <h3>LED-Integrated Shelving</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="furniture">
+          <img src="images/portfolio-walnut-table.jpg" alt="Walnut dining table with steel trestle base" loading="lazy" />
+          <div class="portfolio-overlay">
+            <span>Custom Furniture</span>
+            <h3>Walnut Trestle Table</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="furniture">
+          <img src="images/product-bjorn.png" alt="The Björn — custom dining table with geometric steel base" loading="lazy" style="background: var(--color-light);" />
+          <div class="portfolio-overlay">
+            <span>Custom Furniture</span>
+            <h3>The Björn Dining Table</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="commercial">
+          <img src="images/portfolio-commercial.png" alt="Custom backlit retail sign for Uncle Harry's" loading="lazy" />
+          <div class="portfolio-overlay">
+            <span>Commercial / Retail</span>
+            <h3>Uncle Harry's — Backlit Signage</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="commercial">
+          <img src="images/portfolio-booth.jpg" alt="Custom trade show booth with millwork display" loading="lazy" />
+          <div class="portfolio-overlay">
+            <span>Commercial / Expo</span>
+            <h3>Uncle Harry's — Trade Show Booth</h3>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <section class="quote-cta">
+      <div class="container">
+        <p class="eyebrow" style="color: var(--color-accent);">Let's Work Together</p>
+        <h2>Have a Project in Mind?</h2>
+        <p>Tell us what you're thinking and we'll put together a free quote.</p>
+        <a href="quote.html" class="btn btn-primary">Request a Quote</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="West Wood Design" />
+          <p>Custom millwork and furniture built in Port Angeles, Washington.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="index.html#services">Custom Furniture</a></li>
+            <li><a href="index.html#services">Built-Ins & Millwork</a></li>
+            <li><a href="index.html#services">CNC & Fabrication</a></li>
+            <li><a href="index.html#services">Commercial Millwork</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@westwooddsgn.com">info@westwooddsgn.com</a></li>
+            <li><a href="tel:+19495294249">(949) 529-4249</a></li>
+            <li><a href="#">Port Angeles, WA</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 West Wood Design LLC. All rights reserved.</span>
+        <span>Port Angeles, Washington</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "routes": [
+    {
+      "route": "/quote",
+      "rewrite": "/quote.html"
+    },
+    {
+      "route": "/portfolio",
+      "rewrite": "/portfolio.html"
+    },
+    {
+      "route": "/about",
+      "rewrite": "/about.html"
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/images/*.{png,jpg,gif,webp}", "/css/*", "/js/*", "/fonts/*"]
+  },
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/index.html",
+      "statusCode": 200
+    }
+  },
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+  },
+  "mimeTypes": {
+    ".json": "text/json"
+  }
+}

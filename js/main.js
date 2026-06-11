@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach(el => observer.observe(el));
   }
 
-  // === Quote form submission (Formspree) ===
+  // === Quote form submission (Power Automate) ===
   const quoteForm = document.getElementById('quote-form');
   if (quoteForm) {
     quoteForm.addEventListener('submit', async (e) => {
@@ -92,10 +92,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       try {
         const formData = new FormData(quoteForm);
-        const response = await fetch(quoteForm.action, {
+        const payload = {};
+        formData.forEach((value, key) => { payload[key] = value; });
+
+        const response = await fetch(quoteForm.dataset.endpoint, {
           method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
         });
 
         if (response.ok) {
@@ -111,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
-        alert('Something went wrong. Please email us at woody@westwooddsgn.com');
+        alert('Something went wrong. Please email us at info@westwooddsgn.com');
       }
     });
   }
